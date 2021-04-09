@@ -1,0 +1,26 @@
+<form class="form-inline my-2 my-lg-0 my-searcher">
+    <input #heroName class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+        (keyup)="searchByName(heroName.value)">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button"
+        (click)="searchByName(heroName.value)">Search</button>
+</form>
+
+<div class="row cards">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let hero of heroes ">
+        <div class="my-card mb-5">
+            <div class="my-card-img">
+                <img ngif="{{ hero.images }}" src="{{ hero.images.sm || 'No Image' }}" alt="{{ hero.name }}">
+            </div>
+            <div class="my-card-info">
+                <h5 class="card-title" (click)="getHeroById(hero.id)">{{ hero.name }}</h5>
+                <div class="my-card-bio">
+                    <p>Intelligence: <b>{{ hero.powerstats.intelligence }}</b></p>
+                    <p>Speed: <b>{{ hero.powerstats.speed || "None" }}</b></p>
+                    <p>Power: <b>{{ hero.powerstats.power || "None" }}</b></p>
+                    <p>Gender: <b>{{ hero.appearance.gender || "None" }}</b></p>
+                    <p>Race: <b>{{ hero.appearance.race || "None" }}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="card">
+    <img src="{{ heroInfo.images.md }}" width="320" height="240" alt="{{ heroInfo.name }}">
+    <h2>{{ heroInfo.name }}</h2>
+    <div class="powerstats">
+        <header>Powerstats</header>
+        <div class="power-info">
+            <p>Intelligence: <b>{{ heroInfo.powerstats.intelligence }}</b></p>
+            <p>Speed: <b>{{ heroInfo.powerstats.speed || "None" }}</b></p>
+            <p>Power: <b>{{ heroInfo.powerstats.power || "None" }}</b></p>
+            <p>Strength: <b>{{ heroInfo.powerstats.strength || "None" }}</b></p>
+            <p>Combat: <b>{{ heroInfo.powerstats.combat || "None" }}</b></p>
+            <p>Durability: <b>{{ heroInfo.powerstats.durability || "None" }}</b></p>
+        </div>
+    </div>
+    <div class="bio">
+        <header>Biography</header>
+        <div class="power-info">
+            <p>Fullname: <b>{{ heroInfo.biography.fullName }}</b></p>
+            <p>Alteregos: <b>{{ heroInfo.biography.alterEgos || "None" }}</b></p>
+            <p>aliases: <b>{{ heroInfo.biography.aliases[0] || "None" }}</b></p>
+            <p>Place of birth: <b>{{ heroInfo.biography.placeOfBirth || "None" }}</b></p>
+            <p>Publisher: <b>{{ heroInfo.biography.publisher || "None" }}</b></p>
+        </div>
+    </div>
+    <div class="appearance">
+        <header>Appearance</header>
+        <div class="power-info">
+            <p>Gender: <b>{{ heroInfo.appearance.gender }}</b></p>
+            <p>Race: <b>{{ heroInfo.appearance.race || "None" }}</b></p>
+            <p>Height: <b>{{ heroInfo.appearance.height[0] || heroInfo.appearance.height[1] }}</b></p>
+            <p>Weight: <b>{{ heroInfo.appearance.weight[0] || heroInfo.appearance.weight[1] }}</b></p>
+            <p>Eyecolor: <b>{{ heroInfo.appearance.eyeColor || "None" }}</b></p>
+            <p>Haircolor: <b>{{ heroInfo.appearance.hairColor || "None" }}</b></p>
+        </div>
+    </div>
+    <div class="work">
+        <header>Work & Others</header>
+        <div class="work-info">
+            <p>Work: <b>{{ heroInfo.work.occupation || "None" }}</b></p>
+            <p>Connections: <b>{{ heroInfo.connections.groupAffiliation || "None" }}</b></p>
+        </div>
+    </div>
+</div>

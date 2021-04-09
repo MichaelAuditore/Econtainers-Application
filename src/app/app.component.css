@@ -1,0 +1,15 @@
+.nav-item {
+  padding-right: 8rem;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+}

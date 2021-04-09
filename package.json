@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run devecon:serve-ssr",
+    "serve:ssr": "node dist/devecon/server/main.js",
+    "build:ssr": "ng build --prod && ng run devecon:server:production",
+    "prerender": "ng run devecon:prerender"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +22,12 @@
     "@angular/forms": "~11.2.4",
     "@angular/platform-browser": "~11.2.4",
     "@angular/platform-browser-dynamic": "~11.2.4",
+    "@angular/platform-server": "^11.2.9",
     "@angular/router": "~11.2.4",
+    "@nguniversal/express-engine": "^11.2.1",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.6.0",
+    "request": "^2.88.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -37,6 +46,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "morgan": "^1.10.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
